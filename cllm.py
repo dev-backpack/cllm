@@ -1,6 +1,5 @@
 import typer
 import set.index
-import search.index
 
 import os
 import json
