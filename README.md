@@ -8,3 +8,9 @@ Empower your CLI experience with a command search tool driven by LLM magic!
 ```bash
 cllm set key [API_KEY]
 ```
+
+#### Search LLM for a command for a query
+
+```bash
+cllm search [QUERY]
+```
