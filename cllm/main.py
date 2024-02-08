@@ -35,7 +35,7 @@ def search(query : str):
         {"input" : "Find all files recursively within the current directory that contain 'a' in their filenames.", 
          "output" : "find . -type f -name '*a*' -print"},
         {"input" : "Provide the command to build and push a Docker image from the current directory.", 
-         "output" : "docker build -t myapp:latest . —push"},
+         "output" : "docker build -t myapp:latest . -—push"},
     ]
 
     example_prompt = ChatPromptTemplate.from_messages(
