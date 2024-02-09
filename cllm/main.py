@@ -3,13 +3,25 @@ from .set import index as set_index
 import os
 import json
 import platform
-from langchain.chains import LLMChain
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import (ChatPromptTemplate, FewShotChatMessagePromptTemplate)
 
-app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!")
+from typing import Optional
+from typing_extensions import Annotated
+
+__version__ = "0.1.0"
+
+# version of the CLI
+app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!",
+                  context_settings={"help_option_names": ["-h", "--help"]}
+                  )
 
 app.add_typer(set_index.set_app, name="set", help="Set up configurations used in cllm")
+
+def version_callback(value: bool):
+    if value:
+        typer.echo(f"cllm version: {__version__}")
+        raise typer.Exit()
 
 @app.command()
 def search(query : str):
@@ -65,6 +77,12 @@ def search(query : str):
     output = model.invoke(prompt)
     
     typer.echo(output.content)
+
+@app.callback()
+def main(
+        version: Optional[bool] = typer.Option(None, "--version", "-v", callback=version_callback, help="Print cllm version")
+):
+    pass
 
 if __name__ == "__main__":
     app()
