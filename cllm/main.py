@@ -3,13 +3,12 @@ from .set import index as set_index
 import os
 import json
 import platform
+import tomllib
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import (ChatPromptTemplate, FewShotChatMessagePromptTemplate)
 
 from typing import Optional
 from typing_extensions import Annotated
-
-__version__ = "0.1.0"
 
 # version of the CLI
 app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!",
@@ -20,7 +19,9 @@ app.add_typer(set_index.set_app, name="set", help="Set up configurations used in
 
 def version_callback(value: bool):
     if value:
-        typer.echo(f"cllm version: {__version__}")
+        with open("./pyproject.toml", "rb") as f:
+            data = tomllib.load(f)
+            typer.echo(f"cllm version: {data['tool']['poetry']['version']}")
         raise typer.Exit()
 
 @app.command()
