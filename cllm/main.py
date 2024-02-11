@@ -63,6 +63,7 @@ def search(query : str):
             ("system", "I want you to act as generating a command for request tasks on {os_name}. \
              Also please don't explain the commands, just generate the command."),
             FewShotChatMessagePromptTemplate(example_prompt=example_prompt, examples=examples).format(),
+            ("system", "Only generate the command, don't explain it."),
             ("human", "task : {task}"),
 
         ]
@@ -76,6 +77,9 @@ def search(query : str):
     model = ChatOpenAI()
     
     output = model.invoke(prompt)
+
+    if output.content[:4] == "AI: ":
+        output.content = output.content[4:]
     
     typer.echo(output.content)
 
