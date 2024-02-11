@@ -12,7 +12,9 @@ from typing import Optional
 import pyperclip
 
 # version of the CLI
-app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!",
+app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!\n\ncllm github repo: https://github.com/dev-backpack/cllm \n\n \
+                  If you have any questions or suggestions, feel free to open an issue on the github repo.",
+                  epilog="",
                   context_settings={"help_option_names": ["-h", "--help"]}
                   )
 
