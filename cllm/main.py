@@ -6,8 +6,10 @@ import platform
 import tomllib
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import (ChatPromptTemplate, FewShotChatMessagePromptTemplate)
+from rich import print as rprint
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from typing import Optional
+import pyperclip
 
 # version of the CLI
 app = typer.Typer(help="Empower your CLI experience with a command search tool driven by LLM magic!",
@@ -87,6 +89,9 @@ def search(query : str):
             output.content = output.content[4:]
         
     typer.echo(output.content)
+    pyperclip.copy(output.content)
+    rprint("The command has been copied to [bold green]your clipboard 📋![/bold green]")
+
 
 @app.callback()
 def main(
