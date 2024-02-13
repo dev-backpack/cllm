@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.scripts]
 cllm = "cllm.main:app"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.dependencies]
 python = "^3.10.9"
 typer = {extras = ["all"], version = "^0.9.0"}
 langchain-openai = "^0.0.5"
