@@ -20,4 +20,7 @@ Cargo.lock
 # vscode
 .vscode/
 
+# DS_Store files
+.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/rust
