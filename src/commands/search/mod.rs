@@ -63,16 +63,13 @@ pub async fn handle_search(search: Search) -> Result<(), Box<dyn std::error::Err
             &parameters!{"os_name" => env::consts::OS}
         ).unwrap();
 
-    // i want to append the few shot examples to the conversation
     let few_shot_prompt = few_shot_template(few_shot_examples);
 
     conversation.append(few_shot_prompt);
 
     let conversation = conversation
         .with_system(
-            "
-                Only generate the command, don't explain it.
-            ".to_string()
+            "Only generate the command, don't explain it".to_string()
         );
 
     let mut chain = Chain::new_with_message_collection(
