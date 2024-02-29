@@ -1,3 +1,6 @@
+permissions:
+  checks: write
+
 on:
   pull_request:
     branches:
