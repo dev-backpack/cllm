@@ -5,18 +5,14 @@ use std::fs::File;
 use std::io::prelude::*;
 
 #[derive(Debug, Parser)]
-#[clap(
-    name = "key", 
-    about="Register for an API key to use the OpenAI API",
-)]
+#[clap(name = "key", about = "Register for an API key to use the OpenAI API")]
 pub struct Key {
     // The API key to set
-    #[clap(help="OpenAI API Key")]
+    #[clap(help = "OpenAI API Key")]
     api_key: String,
 }
 
 pub async fn handle_key(key: Key) -> Result<(), Box<dyn std::error::Error>> {
-    
     let home_dir = dirs::home_dir().unwrap();
     let save_dir = home_dir.join(".cllm");
     let config_path = save_dir.join("credentials.json");
@@ -28,8 +24,7 @@ pub async fn handle_key(key: Key) -> Result<(), Box<dyn std::error::Error>> {
     let mut config = if config_path.exists() {
         let config = std::fs::read_to_string(config_path.clone())?;
         serde_json::from_str(&config)?
-    }
-    else {
+    } else {
         serde_json::json!({})
     };
 
