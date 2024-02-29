@@ -1,16 +1,16 @@
 pub mod commands;
 
-use std::env;
 use clap::Parser;
-use commands::{Commands, handle_command};
+use commands::{handle_command, Commands};
 use dirs;
+use std::env;
 
 #[derive(Debug, Parser)]
 #[clap(
     version,
-    about="Empower your CLI experience with a command search tool driven by LLM magic!\n\
-    Github: https://github.com/dev-backpack/cllm\n\
-    If you have any questions or suggestions, feel free to open an issue on the github repo."
+    about = "Empower your CLI experience with a command search tool driven by LLM magic!\n\
+    If you have any questions or suggestions, feel free to open an issue on the github repo.\n\
+    GitHub: https://github.com/dev-backpack/cllm"
 )]
 struct Cli {
     #[clap(subcommand)]
@@ -19,7 +19,6 @@ struct Cli {
 
 #[tokio::main]
 async fn main() {
-
     // Set the OPENAI_API_KEY environment variable
     let home_dir = dirs::home_dir().unwrap();
     let save_dir = home_dir.join(".cllm");
@@ -38,6 +37,5 @@ async fn main() {
     // Parse the command line arguments
     let cli = Cli::parse();
 
-    if let Err(_error) = handle_command(cli.commands).await {
-    }
-}   
+    if let Err(_error) = handle_command(cli.commands).await {}
+}
