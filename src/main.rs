@@ -2,7 +2,7 @@ pub mod commands;
 
 use clap::Parser;
 use commands::{handle_command, Commands};
-use dirs;
+
 use std::env;
 
 #[derive(Debug, Parser)]
