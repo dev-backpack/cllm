@@ -1,25 +1,11 @@
 name: Release
 
-permissions:
-  contents: write
-
 on:
-  push:
-    tags:
-      - v[0-9]+.*
+  release:
+    types: [created, edited]
 
 jobs:
-  create-release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: taiki-e/create-gh-release-action@v1
-        with:
-          # (required) GitHub token for creating GitHub Releases.
-          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
-
   upload-assets:
-    needs: create-release
     strategy:
       matrix:
         os:
