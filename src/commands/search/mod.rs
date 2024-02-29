@@ -32,7 +32,7 @@ pub fn few_shot_template(list: Vec<(String, String)>) -> ChatMessageCollection<S
 }
 
 pub async fn handle_search(search: Search) -> Result<(), Box<dyn std::error::Error>> {
-    if !env::var("OPENAI_API_KEY").is_ok() {
+    if env::var("OPENAI_API_KEY").is_err() {
         println!("Please set your OpenAI API key using the `set key` command.");
         return Ok(());
     }
