@@ -37,5 +37,7 @@ async fn main() {
     // Parse the command line arguments
     let cli = Cli::parse();
 
-    if let Err(_error) = handle_command(cli.commands).await {}
+    if let Err(_error) = handle_command(cli.commands).await {
+        println!("\n\nError Occurred\n{}", _error.to_string());
+    }
 }
