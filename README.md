@@ -13,14 +13,19 @@ $ cllm search "Provide the command to build and push a Docker image from the cur
   docker build -t myapp:latest . --push
 ```
 
-
 ## Installation
 
-`cllm` can be installed using `brew`!
+### Homebrew (macOS and Linux)
 
 ```bash
 brew tap dev-backpack/cllm
 brew install cllm
+```
+
+### Install Script (macOS and Linux)
+
+```bash
+curl https://raw.githubusercontent.com/dev-backpack/cllm/main/install.sh | sh
 ```
 
 ## Commands
