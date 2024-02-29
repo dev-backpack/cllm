@@ -20,6 +20,9 @@ case "$OS" in
     Linux*)
         # cllm download URL and file name for Linux
         CLLM_URL="https://github.com/dev-backpack/cllm/releases/download/v0.1.1/cllm-x86_64-unknown-linux-gnu.tar.gz"
+
+        # Install dependencies for cli-clipboard
+        sudo apt install xorg-dev libxcb-composite0-dev
         ;;
     Darwin*)
         # cllm download URL and file name for macOS
