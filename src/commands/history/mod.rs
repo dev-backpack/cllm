@@ -70,7 +70,7 @@ pub async fn handle_history(history: History) -> Result<(), Box<dyn std::error::
     statement.bind_iter::<_, (_, Value)>([
         (":query", condition.into()),
         (":limit", limit.to_string().into())
-    ])?; // Bind the values to the statement
+    ])?;
 
     while let Ok(State::Row) = statement.next() {
         let id: i64 = statement.read(0)?;
