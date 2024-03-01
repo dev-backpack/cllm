@@ -7,6 +7,9 @@ use tabled::{settings::{peaker::PriorityMax, Width}, Table, Tabled};
 pub struct History {
     #[clap(short, long, default_value = "10")]
     limit: i64,
+
+    #[clap(short, long)]
+    query: Option<String>,
 }
 
 #[derive(Tabled)]
@@ -57,12 +60,17 @@ pub async fn insert_history(input: String, output: String) -> Result<(), Box<dyn
 pub async fn handle_history(history: History) -> Result<(), Box<dyn std::error::Error>> {
     
     let limit = history.limit;
+    let condition = format!("%{}%", history.query.unwrap_or("".to_string())).to_string();
+    
     let connection = connect_history().await;
     let mut rows: Vec<HistoryRow> = Vec::new();
 
-    let query = "SELECT * FROM history ORDER BY created_at DESC LIMIT :limit";
+    let query = "SELECT * FROM history WHERE input LIKE :query ORDER BY created_at DESC LIMIT :limit";
     let mut statement = connection.prepare(query).unwrap();
-    statement.bind((":limit", limit)).unwrap();
+    statement.bind_iter::<_, (_, Value)>([
+        (":query", condition.into()),
+        (":limit", limit.to_string().into())
+    ])?; // Bind the values to the statement
 
     while let Ok(State::Row) = statement.next() {
         let id: i64 = statement.read(0)?;
