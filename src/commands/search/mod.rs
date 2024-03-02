@@ -1,3 +1,4 @@
+use super::history::insert_history;
 use clap::Parser;
 use cli_clipboard::{ClipboardContext, ClipboardProvider};
 use llm_chain::{
@@ -11,7 +12,6 @@ use llm_chain::{
 use llm_chain_openai::chatgpt::Model;
 use spinners::{Spinner, Spinners};
 use std::env;
-use super::history::insert_history;
 
 #[derive(Debug, Parser)]
 #[clap(name = "search", about = "Search a command from the LLM model")]

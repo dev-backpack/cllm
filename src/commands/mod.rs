@@ -1,6 +1,6 @@
+mod history;
 mod search;
 mod set;
-mod history;
 
 use clap::Subcommand;
 
