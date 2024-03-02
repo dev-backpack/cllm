@@ -50,4 +50,4 @@ cllm search [QUERY]
 ```cllm``` is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Connect with us
-If you have any questions or suggestions, feel free to open an issue or join our [Discord server](https://discord.gg/c4Jm3r8pBd).
+If you have any questions or suggestions, feel free to open an issue or join our [Discord server](https://discord.gg/sy9BhhdbJu).
