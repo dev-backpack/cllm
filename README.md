@@ -1,5 +1,5 @@
 # cllm
-[![](https://dcbadge.vercel.app/api/server/c4Jm3r8pBd?style=flat&compact=true)](https://discord.gg/c4Jm3r8pBd)
+[![Discord](https://dcbadge.vercel.app/api/server/sy9BhhdbJu?style=flat&compact=true)](https://discord.gg/sy9BhhdbJu)
 [![GitHub Release](https://img.shields.io/github/v/release/dev-backpack/cllm)](https://github.com/dev-backpack/cllm/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/dev-backpack/cllm)](https://github.com/dev-backpack/cllm/issues)
