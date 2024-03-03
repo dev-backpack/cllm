@@ -11,6 +11,9 @@ pub struct History {
     #[clap(short, long, default_value = "10")]
     limit: i64,
 
+    #[clap(short, long, default_value = "0")]
+    offset: i64,
+
     #[clap(short, long)]
     query: Option<String>,
 }
@@ -69,11 +72,12 @@ pub async fn handle_history(history: History) -> Result<(), Box<dyn std::error::
     let mut rows: Vec<HistoryRow> = Vec::new();
 
     let query =
-        "SELECT * FROM history WHERE input LIKE :query ORDER BY created_at DESC LIMIT :limit";
+        "SELECT * FROM history WHERE input LIKE :query ORDER BY created_at DESC LIMIT :limit OFFSET :offset";
     let mut statement = connection.prepare(query).unwrap();
     statement.bind_iter::<_, (_, Value)>([
         (":query", condition.into()),
         (":limit", limit.to_string().into()),
+        (":offset", history.offset.to_string().into()),
     ])?;
 
     while let Ok(State::Row) = statement.next() {
