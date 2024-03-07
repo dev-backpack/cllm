@@ -5,7 +5,7 @@ use commands::{handle_command, Commands};
 
 use std::env;
 
-const CLLM : &str = r#"
+const CLLM: &str = r#"
  _____                                               _____ 
 ( ___ )---------------------------------------------( ___ )
  |   |                                               |   | 
@@ -53,13 +53,16 @@ async fn main() {
         }
     }
     if env::args().collect::<Vec<String>>().len() == 1 {
-        println!("{}\n Welcome to CLLM! Try running `cllm --help` to get started.\n", CLLM);
+        println!(
+            "{}\n Welcome to CLLM! Try running `cllm --help` to get started.\n",
+            CLLM
+        );
         return;
     }
 
     // Parse the command line arguments
     let cli = Cli::parse();
-    
+
     if let Err(_error) = handle_command(cli.commands).await {
         println!("\n\nError Occurred\n{}", _error.to_string());
     }
