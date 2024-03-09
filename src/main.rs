@@ -64,6 +64,6 @@ async fn main() {
     let cli = Cli::parse();
 
     if let Err(_error) = handle_command(cli.commands).await {
-        println!("\n\nError Occurred\n{}", _error.to_string());
+        println!("\n\nError Occurred\n{}", _error);
     }
 }
