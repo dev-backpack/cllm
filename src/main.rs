@@ -5,6 +5,22 @@ use commands::{handle_command, Commands};
 
 use std::env;
 
+const CLLM: &str = r#"
+ _____                                               _____ 
+( ___ )---------------------------------------------( ___ )
+ |   |                                               |   | 
+ |   |                                               |   | 
+ |   |       ██████╗██╗     ██╗     ███╗   ███╗      |   | 
+ |   |      ██╔════╝██║     ██║     ████╗ ████║      |   | 
+ |   |      ██║     ██║     ██║     ██╔████╔██║      |   | 
+ |   |      ██║     ██║     ██║     ██║╚██╔╝██║      |   | 
+ |   |      ╚██████╗███████╗███████╗██║ ╚═╝ ██║      |   | 
+ |   |       ╚═════╝╚══════╝╚══════╝╚═╝     ╚═╝      |   | 
+ |   |                                               |   | 
+ |___|                                               |___| 
+(_____)---------------------------------------------(_____)
+"#;
+
 #[derive(Debug, Parser)]
 #[clap(
     version,
@@ -15,6 +31,9 @@ use std::env;
 struct Cli {
     #[clap(subcommand)]
     pub commands: Commands,
+
+    #[arg(short, long)]
+    pub vers: bool,
 }
 
 #[tokio::main]
@@ -33,11 +52,18 @@ async fn main() {
             env::set_var("OPENAI_API_KEY", api_key);
         }
     }
+    if env::args().collect::<Vec<String>>().len() == 1 {
+        println!(
+            "{}\n Welcome to CLLM! Try running `cllm --help` to get started.\n",
+            CLLM
+        );
+        return;
+    }
 
     // Parse the command line arguments
     let cli = Cli::parse();
 
     if let Err(_error) = handle_command(cli.commands).await {
-        println!("\n\nError Occurred\n{}", _error.to_string());
+        println!("\n\nError Occurred\n{}", _error);
     }
 }
