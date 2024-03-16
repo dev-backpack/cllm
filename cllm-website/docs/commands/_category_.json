@@ -1,0 +1,8 @@
+{
+  "label": "Commands",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Below is a list of CLLM commands and their usages"
+  }
+}

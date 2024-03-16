@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "cllm",
-  tagline: "Dinosaurs are cool",
+  title: "CLLM",
+  tagline: "Empower your CLI experience with a command search tool driven by LLM magic!",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -56,7 +56,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "CLLM",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -95,6 +95,10 @@ const config: Config = {
               label: "Discord",
               href: "https://discord.gg/sy9BhhdbJu",
             },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/groups/14411847",
+            }
           ],
         },
         {
