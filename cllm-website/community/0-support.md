@@ -18,4 +18,4 @@ If you have an idea for a new feature or improvement to CLLM, please open an iss
 
 ## News
 
-For the latest news about CLLM, follow us on [Twitter](https://twitter.com/devbackpacks) and join our [Discord server](https://discord.gg/8v3Gk3j) and the [CLLM Blog](http://localhost:3000/blog).
+For the latest news about CLLM, follow us on [Twitter](https://twitter.com/devbackpacks) and join our [Discord server](https://discord.gg/8v3Gk3j) and the [CLLM Blog](../blog).
