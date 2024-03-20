@@ -8,6 +8,11 @@ type FeatureItem = {
   description: JSX.Element;
 };
 
+type ExampleItem = {
+  url: string;
+  description: JSX.Element;
+};
+
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
@@ -41,6 +46,22 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
+const ExampleList: ExampleItem[] = [
+  {
+    // gif image of the example
+    url: 'img/cllm-example-1.gif',
+    description: (
+      <>
+        <p>
+          <strong>Example 1</strong>: This is an example of a feature that is
+          available in CLLM.
+        </p>
+      </>
+    ),
+  }
+];
+
+
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
@@ -55,14 +76,30 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
+function Example({url, description}: ExampleItem) {
+  return (
+    <div className={clsx('col')}>
+      <div className="text--center">
+        <img src={url} />
+      </div>
+      <div className="text--center padding-horiz--md">
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {ExampleList.map((props, idx) => (
+            <Example key={idx} {...props} />
           ))}
+          {/* {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))} */}
         </div>
       </div>
     </section>
