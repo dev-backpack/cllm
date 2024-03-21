@@ -4,27 +4,26 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+ :root {
+  --ifm-color-primary: #2e85b5; /* Updated to a light blue */
+  --ifm-color-primary-dark: #29749c; /* A slightly darker shade */
+  --ifm-color-primary-darker: #276794; /* Even darker for depth */
+  --ifm-color-primary-darkest: #20537b; /* Darkest blue for contrast */
+  --ifm-color-primary-light: #3396bd; /* Lighter for highlights */
+  --ifm-color-primary-lighter: #359bc2; /* A bit lighter */
+  --ifm-color-primary-lightest: #3ca6d8; /* Lightest blue for accents */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #25a2c0; /* Lighter, vibrant blue */
+  --ifm-color-primary-dark: #2190af; /* Darker to contrast with the light blue */
+  --ifm-color-primary-darker: #1f88a5; /* Adds depth */
+  --ifm-color-primary-darkest: #1a7088; /* Darkest shade for solid backgrounds */
+  --ifm-color-primary-light: #29b5d0; /* Bright and light */
+  --ifm-color-primary-lighter: #32b8d4; /* Slightly lighter */
+  --ifm-color-primary-lightest: #4fcdbf; /* Lightest and most vibrant */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
