@@ -136,6 +136,7 @@ const config: Config = {
         path: './community',
         routeBasePath: 'community',
         sidebarPath: './sidebarsCommunity.js',
+        editUrl: 'https://github.com/dev-backpack/cllm/cllm-website/',
         // ... other options
       },
     ]
