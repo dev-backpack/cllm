@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # key
 
-The `key` command is used to set the API key for the LLM API.
+The `key` command is used to set the API key for the OpenAI API.
 
 ## Usage
 

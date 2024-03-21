@@ -29,13 +29,13 @@ This command generates static content into the `build` directory and can be serv
 Using SSH:
 
 ```
-$ USE_SSH=true yarn deploy
+$ USE_SSH=true npm deploy
 ```
 
 Not using SSH:
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+$ GIT_USER=<Your GitHub username> npm deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

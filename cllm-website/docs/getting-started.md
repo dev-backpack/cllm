@@ -4,20 +4,20 @@ sidebar_position: 2
 
 # Getting Started
 
-Welcome to the **CLLM** documentation! This guide will help you get started with **CLLM** and show you how to use it to improve your CLI experience.
+**CLLM** is a Command Line tool that is designed to help you **write & find cli-command** using **Large Language Model**.
 
 ## Installation
 
 To install **CLLM**, you can use the following command:
 
-### Homebrew
+### Homebrew (macOS and Linux)
 
 ```bash
 brew tap dev-backpack/cllm
 brew install cllm
 ```
 
-### Install Script
+### Install Script (macOS and Linux)
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/dev-backpack/cllm/main/install.sh | sh
