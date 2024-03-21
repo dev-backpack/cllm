@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>CLLM Blog</title>
+        <link>https://dev-backpack.github.io/cllm/blog</link>
+        <description>CLLM Blog</description>
+        <lastBuildDate>Fri, 15 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://dev-backpack.github.io/cllm/blog/welcome</link>
+            <guid>https://dev-backpack.github.io/cllm/blog/welcome</guid>
+            <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hello and Welcome to the CLLM documentation!]]></description>
+            <content:encoded><![CDATA[<p>Hello and Welcome to the <strong>CLLM</strong> documentation!</p>
+<p>CLLM is a <strong>C</strong>ommand <strong>L</strong>ine <strong>L</strong>arge Language <strong>M</strong>odel tool that is designed to help you write cli-command.
+Currently, CLLM is based on <strong>GPT-3.5 Turbo</strong> Model, which is a large language model developed by OpenAI.</p>
+<p>Below are the list of commands that you can use to interact with CLLM.</p>
+<ul>
+<li><code>help</code> - To get the list of commands that you can use.</li>
+<li><code>search</code> - To search for a specific command about your query.</li>
+<li><code>set key</code> - To set the OpenAI API key for using CLLM.</li>
+<li><code>history</code> - To get the history of (query, command) that you have used.</li>
+</ul>
+<p>If you have any questions or need help, feel free to ask in the <a href="https://discord.gg/sy9BhhdbJu" target="_blank" rel="noopener noreferrer">CLLM Discord</a>.</p>
+<p><img decoding="async" loading="lazy" alt="cllm-example-1" src="https://dev-backpack.github.io/cllm/assets/images/cllm-example-1-9844bb072de246982dd847eba1e3f5df.gif" width="700" height="300" class="img_ev3q"></p>]]></content:encoded>
+            <category>welcome</category>
+        </item>
+    </channel>
+</rss>

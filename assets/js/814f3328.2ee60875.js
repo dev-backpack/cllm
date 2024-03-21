@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcllm_website=self.webpackChunkcllm_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/cllm/blog/welcome","unlisted":false}]}')}}]);
