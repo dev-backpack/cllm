@@ -1,3 +1,4 @@
+use super::history::insert_history;
 use clap::Parser;
 use cli_clipboard::{ClipboardContext, ClipboardProvider};
 use llm_chain::{
@@ -11,6 +12,7 @@ use llm_chain::{
 use llm_chain_openai::chatgpt::Model;
 use spinners::{Spinner, Spinners};
 use std::env;
+
 #[derive(Debug, Parser)]
 #[clap(name = "search", about = "Search a command from the LLM model")]
 pub struct Search {
@@ -71,7 +73,7 @@ pub async fn handle_search(search: Search) -> Result<(), Box<dyn std::error::Err
     let step = Step::for_prompt_template(prompt!(
         user: "task : {{query}}"
     ));
-    let parameters = parameters!().with("query", search.qeury);
+    let parameters = parameters!().with("query", search.qeury.clone());
     let res = chain.send_message(step, &parameters, &exec).await?;
     let res = res.to_immediate().await?.as_content().to_chat().to_string();
     let res = res.split("Assistant: ").collect::<Vec<&str>>()[1]
@@ -81,6 +83,7 @@ pub async fn handle_search(search: Search) -> Result<(), Box<dyn std::error::Err
 
     let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
     ctx.set_contents(res.clone().to_string()).unwrap();
+    insert_history(search.qeury, res.clone()).await?;
 
     spinner.stop_and_persist(
         "✔",
