@@ -8,11 +8,11 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://dev-backpack.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
-
+  baseUrl: "/cllm/",
+  trailingSlash: false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "dev-backpack", // Usually your GitHub org/user name.
@@ -37,13 +37,13 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Dev-backpack/cllm/",
+          editUrl: "https://github.com/dev-backpack/cllm/cllm-website/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Dev-backpack/cllm/",
+          editUrl: "https://github.com/dev-backpack/cllm/cllm-website/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -54,12 +54,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/cllm-social-card.png",
     navbar: {
       title: "CLLM",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         {
@@ -136,6 +136,7 @@ const config: Config = {
         path: './community',
         routeBasePath: 'community',
         sidebarPath: './sidebarsCommunity.js',
+        editUrl: 'https://github.com/dev-backpack/cllm/cllm-website/',
         // ... other options
       },
     ]

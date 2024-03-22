@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="CLLM is a Command Line tool that is designed to help you write & find cli-command using Large Language Model.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
