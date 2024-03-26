@@ -19,14 +19,14 @@ OS=$(uname -s)
 case "$OS" in
     Linux*)
         # cllm download URL and file name for Linux
-        CLLM_URL="https://github.com/dev-backpack/cllm/releases/download/v0.1.1/cllm-x86_64-unknown-linux-gnu.tar.gz"
+        CLLM_URL="https://github.com/dev-backpack/cllm/releases/download/v0.1.2/cllm-x86_64-unknown-linux-gnu.tar.gz"
 
         # Install dependencies for cli-clipboard
         sudo apt install xorg-dev libxcb-composite0-dev
         ;;
     Darwin*)
         # cllm download URL and file name for macOS
-        CLLM_URL="https://github.com/dev-backpack/cllm/releases/download/v0.1.1/cllm-x86_64-apple-darwin.tar.gz"
+        CLLM_URL="https://github.com/dev-backpack/cllm/releases/download/v0.1.2/cllm-x86_64-apple-darwin.tar.gz"
         ;;
     *)
         echo "Unsupported operating system."

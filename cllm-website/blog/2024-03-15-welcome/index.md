@@ -14,7 +14,6 @@ Below are the list of commands that you can use to interact with CLLM.
 - `help` - To get the list of commands that you can use.
 - `search` - To search for a specific command about your query.
 - `set key` - To set the OpenAI API key for using CLLM.
-- `history` - To get the history of (query, command) that you have used.
 
 If you have any questions or need help, feel free to ask in the [CLLM Discord](https://discord.gg/sy9BhhdbJu).
 
