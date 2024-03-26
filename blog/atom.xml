@@ -2,11 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dev-backpack.github.io/cllm/blog</id>
     <title>CLLM Blog</title>
-    <updated>2024-03-15T00:00:00.000Z</updated>
+    <updated>2024-03-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dev-backpack.github.io/cllm/blog"/>
     <subtitle>CLLM Blog</subtitle>
     <icon>https://dev-backpack.github.io/cllm/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[CLLM 0.1.2]]></title>
+        <id>https://dev-backpack.github.io/cllm/blog/release/0.1.2</id>
+        <link href="https://dev-backpack.github.io/cllm/blog/release/0.1.2"/>
+        <updated>2024-03-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today, we are excited to announce the release of CLLM 0.1.2!]]></summary>
+        <content type="html"><![CDATA[<p>Today, we are excited to announce the release of CLLM 0.1.2!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlights">Highlights<a href="https://dev-backpack.github.io/cllm/blog/release/0.1.2#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h3>
+<p>This release includes the following updates:</p>
+<ul>
+<li>Added the new <code>cllm history</code> command to show the history of commands searched.</li>
+<li>Added the new <code>cllm describe</code> command to show the description of a command.</li>
+<li>Added CLLM icon to documentation.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="other-changes">Other Changes<a href="https://dev-backpack.github.io/cllm/blog/release/0.1.2#other-changes" class="hash-link" aria-label="Direct link to Other Changes" title="Direct link to Other Changes">​</a></h3>
+<ul>
+<li><a href="https://github.com/dev-backpack/cllm/pull/29" target="_blank" rel="noopener noreferrer">#29</a>: Add installation script for macOS and Linux.</li>
+<li><a href="https://github.com/dev-backpack/cllm/pull/34" target="_blank" rel="noopener noreferrer">#34</a>: Add error handling for CLI errors</li>
+<li><a href="https://github.com/dev-backpack/cllm/pull/38" target="_blank" rel="noopener noreferrer">#38</a>: Add CLLM ASCII art logo to cllm</li>
+</ul>
+<p>For more details, please refer to the <a href="https://github.com/dev-backpack/cllm/releases/tag/v0.1.2" target="_blank" rel="noopener noreferrer">release notes</a>.</p>
+<p><img decoding="async" loading="lazy" alt="Release" src="https://dev-backpack.github.io/cllm/assets/images/release-0.1.2-img-f93806570b6f24f1cdb66212ae1c0623.png" width="834" height="417" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="contact-us">Contact Us<a href="https://dev-backpack.github.io/cllm/blog/release/0.1.2#contact-us" class="hash-link" aria-label="Direct link to Contact Us" title="Direct link to Contact Us">​</a></h3>
+<p>If you have any questions or need help, feel free to ask in the <a href="https://discord.gg/sy9BhhdbJu" target="_blank" rel="noopener noreferrer">CLLM Discord</a>.</p>]]></content>
+        <author>
+            <name>Chanwoong Kim</name>
+            <uri>https://github.com/ykdy3951</uri>
+        </author>
+        <category label="release" term="release"/>
+        <category label="cllm" term="cllm"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://dev-backpack.github.io/cllm/blog/welcome</id>
@@ -21,7 +52,6 @@ Currently, CLLM is based on <strong>GPT-3.5 Turbo</strong> Model, which is a lar
 <li><code>help</code> - To get the list of commands that you can use.</li>
 <li><code>search</code> - To search for a specific command about your query.</li>
 <li><code>set key</code> - To set the OpenAI API key for using CLLM.</li>
-<li><code>history</code> - To get the history of (query, command) that you have used.</li>
 </ul>
 <p>If you have any questions or need help, feel free to ask in the <a href="https://discord.gg/sy9BhhdbJu" target="_blank" rel="noopener noreferrer">CLLM Discord</a>.</p>
 <p><img decoding="async" loading="lazy" alt="cllm-example-1" src="https://dev-backpack.github.io/cllm/assets/images/cllm-example-1-9844bb072de246982dd847eba1e3f5df.gif" width="700" height="300" class="img_ev3q"></p>]]></content>
